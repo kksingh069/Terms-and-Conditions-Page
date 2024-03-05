@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<style>
+    .navbar-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 10px;
+    }
+
+    html,
+    body {
+        overflow-y: visible;
+    }
+
+    .left-container {
+        background-color: #F0F0F0;
+        height: 70vh;
+        width: 100%;
+        padding: 5px;
+        cursor: pointer;
+        position: sticky;
+        top: 0;
+        overflow-y: auto;
+        
+    }
+
+    .container {
+        margin-top: 40px;
+    }
+
+
+    .left-container h5:hover,
+    .left-container h6:hover {
+
+        text-decoration: underline;
+    }
+
+    .navbar a {
+        margin-right: 20px;
+        color: black;
+        font-weight: 600;
+    }
+
+    .sign-in-button {
+        margin-right: 30px;
+    }
+
+    .heading h2 {
+        color: #4C4C4C;
+        font-weight: 700;
+        font-size: xx-large;
+    }
+
+    .heading p b {
+        color: #717171;
+    }
+
+    .right-container {
+        height: 100%;
+        overflow-y: auto;
+        color: #717171;
+
+    }
+
+    .content {
+        padding-right: 15px;
+    }
+
+    .content-section span {
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .second-heading h6 {
+        color: #717171;
+        font-weight: 600;
+
+    }
+
+    p span {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .privacy h5,
+    .privacy h6 {
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+
+    .left-container.text-end {
+        border-bottom-right-radius: 10px;
+        border-right: 10px solid transparent;
+    }
+
+    .border-selected {
+        border-right: 10px solid #4B70E2;
+    }
+
+    .black-link {
+        color: rgb(133, 133, 133);
+    }
+</style>
+
+<body>
+    <div class="navbar-container">
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">Tours</a>
+            <a href="#">Travel Styles</a>
+            <a href="#">About Us</a>
+        </nav>
+        <div class="sign-in-button">
+            <button>Sign In</button>
+        </div>
+    </div>
+    <section>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="left-container text-end" id="leftContainer">
+                        <div class="privacy">
+                            <h5 data-bs-toggle="collapse" data-bs-target="#terms" onclick="scrollToContent('terms')">
+                                Terms
+                                and Conditions</h5>
+                            <h6 data-bs-toggle="collapse" data-bs-target="#privacy" onclick="toggleBorder(this)">Privacy
+                                Policy</h6>
+                            <div id="privacy" class="collapse">
+                                <a href="#collection" class="black-link">What we Collect.</a><br>
+                                <a href="#usage" class="black-link">What do we do with the information we
+                                    collect.</a><br>
+                                <a href="#security" class="black-link">Security</a><br>
+                                <a href="#disclaimer" class="black-link">Disclaimer Policy</a>
+                            </div>
+
+                            <h6 data-bs-toggle="collapse" data-bs-target="#cancellation" onclick="toggleBorder(this)">
+                                Cancellation Policy</h6>
+
+                            <div id="cancellation" class="collapse">
+                                <a href="#Please Note" class="black-link">Please Note</a><br>
+                                <a href="#Contact Us" class="black-link">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class=" col-md-8">
+                    <div class="right-container">
+                        <div id="terms">
+                            <h4>Terms and Conditions</h4>
+                            <p><b>Website</b>: Taj Mahal Tours
+                            </p>
+                        </div>
+                        <div class="content-section">
+                            <span>The website “Tajmahaltours.com” is owned by Tripo Culture Pvt. Ltd. The owner of the
+                                website, including its subsidiaries and affiliates, refers to itself as "Website" or
+                                "Website Owner" or "we," "us," or "our." Visitors, also referred to as "you" or "your,"
+                                may
+                                access the information on the website or any of its pages, subject to the terms and
+                                conditions outlined in this section, the privacy policy, and any other relevant policies
+                                and
+                                terms and conditions that may be applicable to a particular section or module of the
+                                website.</span>
+                            <br><span>Greetings from Tripo Culture Pvt. Ltd. Our relationship with you is governed by
+                                the
+                                terms and conditions of use mentioned below, which, along with our privacy policy, you
+                                agree
+                                to comply with if you continue to browse and use our website.</span>
+                            <span>The use of this website is subject to the following terms of use:</span>
+                            <ul>
+                                <li>This website's content is solely for your general information and use. This content
+                                    is
+                                    subject to change without any prior notice.</li>
+                                <li>Regarding the accuracy, timeliness, functionality, completeness, or suitability of
+                                    the
+                                    information and materials found or made available on this website for any specific
+                                    purpose, neither we nor any third parties give any warranty or guarantee. To the
+                                    maximum
+                                    extent permissible by law, you acknowledge that such information and materials may
+                                    contain mistakes or inaccuracies, and we specifically disclaim any liability for any
+                                    such errors or inaccuracies.</li>
+                                <li>We disclaim all liability for any use of information or content on this website,
+                                    which
+                                    you make at your own risk. It is your duty to confirm that any goods, services, or
+                                    information obtained via this website fulfill your specific needs.</li>
+                                <li>The content on this website is either our property or is licensed to us. This
+                                    content
+                                    consists of, but is not restricted to, the layout, design, look, graphics, and
+                                    visuals.
+                                    Except as permitted by the copyright notice incorporated into these terms and
+                                    conditions, reuse of this content is forbidden.</li>
+                                <li>The website acknowledges the use of all trademarks that are recreated on it but are
+                                    not
+                                    owned or licensed by the operator.</li>
+                                <li>Unauthorized use of this website could result in a claim for damage and can be a
+                                    criminal offense.</li>
+                                <li>This website might occasionally include links to other websites. We've included
+                                    these
+                                    websites for your convenience in order to get more details. They do not imply our
+                                    authorization of the website or websites. Regarding the linked website(s), we have
+                                    no
+                                    control over its content.</li>
+                                <li>Without the prior written consent of Tripo Culture Pvt. Ltd., you are not permitted
+                                    to
+                                    make a link to this website from another website or document.</li>
+                                <li>The laws of India or another regulatory body shall apply to your use of this website
+                                    and
+                                    to any dispute arising from such use.</li>
+                            </ul>
+                            <span>"We as a merchant shall be under no liability whatsoever in respect of any loss or
+                                damage
+                                arising directly or indirectly out of the decline of authorization for any Transaction,
+                                on
+                                Account of the Cardholder having exceeded the preset limit mutually agreed by us with
+                                our
+                                acquiring bank from time to time"</span>
+                        </div>
+                        <div id="privacy">
+                            <h5><a href="#collection" style="color: #717171;">Privacy Policy</a></h5>
+                            <p>A privacy policy outlines how you plan to protect consumers&#39; privacy when using your
+                                website. It
+                                outlines the data you&#39;ll collect, how you&#39;ll use it, and the security measures
+                                you&#39;ll take.</p>
+                            <p>A privacy policy is a legal document that lists all or some of the ways by which a party
+                                collects,
+                                utilizes, discloses, and keeps consumer data. A privacy policy&#39;s precise contents
+                                will
+                                rely on the
+                                applicable laws and may need to take into account the needs of several jurisdictions or
+                                nations.</p>
+                            <p>Tripo Culture Pvt. Ltd. is dedicated to maintaining the privacy of its customers through
+                                this
+                                website-
+                                tajmahaltours.com. You may be certain that any information we request from you on this
+                                website
+                                that allows us to identify you will only be used in compliance with our privacy
+                                statement.
+                            </p>
+                            <p>
+                                Tripo Culture Pvt. Ltd. has the right to update this website with revised policies from
+                                time
+                                to time.
+                                Check this page frequently to make sure any modifications have not been made against
+                                your
+                                preferences.
+                            </p>
+                        </div>
+                        <div class="privacy-second-section" id="collection">
+                            <h5>What We Collect</h5>
+                            <p>We may collect the following information: </p>
+                            <ul>
+                                <li><span>Name and job title</span></li>
+                                <li><span>Contact information including email address</span></li>
+                                <li><span>Demographic information such as postcode, preferences, and interests</span>
+                                </li>
+                                <li><span>Other information relevant to customer surveys and/or offers</span></li>
+                            </ul>
+                            <p>
+                            <div class="usage" id="usage">
+
+                            </div>
+                            <ul>
+                                <li><span>For keeping internal records.</span></li>
+                                <li><span>We may use the information to improve our services.</span></li>
+                                <li><span>We may occasionally send promotional emails about new products, special
+                                        offers, or
+                                        other information that we think you may find interesting using the email address
+                                        that you have provided.</span></li>
+                                <li><span>From time to time, we may also use your information to contact you for market
+                                        research
+                                        purposes. We may contact you by email, phone, fax, or mail. We may use the
+                                        information to
+                                        customize the website according to your interests.</span></li>
+                            </ul>
+                            </p>
+                        </div>
+                        <div class="security" id="security">
+                            <h5>Security</h5>
+                            <span>We are dedicated to protecting your information. We have put in place appropriate
+                                physical,
+                                technological, and administrative policies to safeguard and secure the information we
+                                collect online
+                                in order to prevent unauthorized access or disclosure.</span>
+
+                            <h5>How We Use Cookies</h5>
+                            <span>A cookie is a little file that requests authorization to be stored on the hard drive
+                                of
+                                your computer.
+                                Once you accept, cookies are added, and the cookie informs you when you visit a specific
+                                page of
+                                the website or assists in the analysis of web traffic. Cookies enable personalized
+                                responses
+                                from web
+                                apps. By collecting and storing information about your preferences, the web application
+                                can
+                                adjust
+                                its functionality to your needs, preferences, and likes and dislikes.</span><br>
+                            <span>
+                                Cookies from traffic logs are utilized by us to determine which pages are being used.
+                                This
+                                aids in the
+                                analysis of website traffic data and website improvement so that it better meets the
+                                needs
+                                of users.
+                                This data is only used for statistical analysis; after that, it is deleted from the
+                                system.
+                            </span><br>
+                            <span>
+                                In general, cookies enable us to track which pages you find useful and which you do not,
+                                which helps
+                                us provide you with a better experience on our website. Other than the information you
+                                choose to
+                                share with us, a cookie in no way allows us access to your computer or any personal
+                                information
+                                about you.
+                            </span><br>
+                            <span>
+                                Accepting or rejecting cookies is up to you. The majority of web browsers accept cookies
+                                by
+                                default,
+                                but if you&#39;d like, you can usually change your browser&#39;s settings to reject
+                                cookies.
+                                This may prevent
+                                you from tracking the full advantage of the website.
+                            </span>
+                            <h5>Controlling Your Personal Information</h5>
+                            <p>You have the following options for limiting how your personal information is collected
+                                and
+                                used:</p>
+                            <ul>
+                                <li><span>Whenever you fill out the form on our website, tick the column if given, if
+                                        you do
+                                        not want your information to be used by anyone for direct marketing
+                                        purposes.</span>
+                                </li>
+                                <li><span>If you have previously allowed us to use your information for direct marketing
+                                        purposes, you can email us at any time not to use your information further for
+                                        any
+                                        marketing purposes.</span></li>
+                                <li><span>Unless we obtain your consent or are compelled by law to do so, we will not
+                                        sell,
+                                        transfer, or lease your personal information to outside parties. If you indicate
+                                        that you would like this to happen, we may use your personal information to send
+                                        you
+                                        promotional offers that we believe you might find interesting.</span></li>
+                            </ul>
+
+
+                        </div>
+                        <div class="disclaimer-policy" id="disclaimer">
+                            <h5>Disclaimer Policy</h5>
+                            <p>
+                                In order to meet a duty of care owed to prevent unjustified risk of harm, a disclaimer
+                                may
+                                contain
+                                terms and conditions that have been mutually agreed upon and privately established as
+                                part
+                                of a
+                                contract, or it may communicate expectations or warnings to the general public (or
+                                another
+                                class of
+                                persons). Certain disclaimers are meant to reduce exposure to damages after an initial
+                                harm
+                                has
+                                occurred. Furthermore, a voluntary waiver of a right or obligation that may be owed to
+                                the
+                                disclaiming party may be owned by certain types of disclaimers.
+
+                            </p><br>
+                            <p> Disclaimers vary in how uniform they are. Certain disclaimers may change according to
+                                the
+                                particular
+                                situation and people involved, but other kinds may strictly follow a standard set of
+                                procedures that
+                                are rarely or never changed outside of official channels.</p>
+                            <p><b>Website disclaimer covers the following</b>:</p>
+                            <ul>
+                                <li><span>No warranties</span></li>
+                                <li><span>Limitations of liability</span></li>
+                                <li><span>Exceptions</span></li>
+                                <li><span>Reasonableness</span></li>
+                                <li><span>Other parties</span></li>
+                                <li><span>Unenforceable provisions</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="disclaimer" id="Please Note">
+                            <h5>Website Disclaimer</h5>
+                            <p>This website&#39;s content is intended only for general informational purposes. While we
+                                make
+                                every
+                                effort to ensure that the information is accurate and up-to-date, we do not make any
+
+                                representations or warranties regarding the website&#39;s completeness, accuracy,
+                                reliability, suitability,
+                                availability, or the information, goods, services, or related graphics it contains for
+                                any
+                                purpose. Any
+                                reliance you may have on such information is strictly at your risk.</p>
+                            <p>We disclaim all liability for any loss or harm resulting from the use of this website,
+                                including but not
+                                limited to indirect or consequential loss or damage, or any loss or damage at all
+                                resulting
+                                from the
+                                loss of data or profits.</p><br>
+                            <p>You may link to other websites that are not managed by Tripo Culture Pvt. Ltd. using this
+                                website-
+                                Tajmahaltours.com. The availability, nature, and content of those websites are beyond
+                                our
+                                control.
+                                Any links provided are not meant to be recommendations or endorsements of the content
+                                found
+                                within.</p><br>
+                            <p>We make every effort to maintain the website&#39;s uptime and functionality. But in the
+                                event
+                                that
+                                technical difficulties beyond our control cause the website to become momentarily
+                                unavailable,
+                                Tajmahaltours.com disclaims all liability and accepts no responsibility for such events.
+                            </p>
+                        </div>
+                        <div id="cancellation">
+                            <div class="content" id="Contact Us">
+                                <p> <b>Cancellation and Refund Policy</b> <br>The cancellation and refund policies of
+                                    the
+                                    hotels and resorts where the reservation was
+                                    made depend upon a number of circumstances, including the time of year, the length
+                                    of
+                                    time between the date of cancellation and the check-in date, and seasonality. A 10%
+                                    processing fee will be imposed by Tripo Culture Pvt. Ltd. in the event of
+                                    cancellations
+                                    or changes. You can refer to our cancellation policy page to get more details on it.
+                                </p>
+                                <p> <b>Please Note</b> <br>Tripo Culture Pvt. Ltd. works dedicatedly to ensure its
+                                    customers
+                                    get unforgettable
+                                    travel experiences and reserves all the rights to make amendments to these terms and
+                                    conditions at any time without any prior notice.</p>
+                                <p><b>Contact Us:</b> <br>Tripo Culture Pvt. Ltd. is the leading India-based travel
+                                    company
+                                    that
+                                    offers bespoke tour packages to suit the specific needs of travelers of different
+                                    types.
+                                    If you have any queries related to these terms and conditions, feel free to reach
+                                    out to
+                                    us on call or write to us to get immediate solutions. </p><br>
+                                <p>We are available 24 hours to
+                                    assist you!</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
